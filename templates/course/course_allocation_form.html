@@ -28,7 +28,7 @@
             <p class="form-title">Course Allocation Form</p>
             <div class="p-3">
                 <form action="" method="POST">{% csrf_token %}
-                    <!-- {{ form|crispy }} -->
+                   
                         <div class="form-group">
                             {{ form.lecturer.label }}{{ form.lecturer }}
                             <span class="danger">{{ form.lecturer.errors }}</span>

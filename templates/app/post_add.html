@@ -27,7 +27,18 @@
             <p class="form-title">Item Post & Update Form</p>
             <div class="container"><br>
                 <form action="" method="POST">{% csrf_token %}
-                    {{ form|crispy }}
+                    <div class="form-group">
+                        <b>{{ form.title.label }}</b>{{ form.title }}
+                        <span class="danger">{{ form.title.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>{{ form.summary.label }}</b>{{ form.summary }}
+                        <span class="danger">{{ form.summary.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>{{ form.posted_as.label }}</b>{{ form.posted_as }}
+                        <span class="danger">{{ form.posted_as.errors }}</span>
+                    </div>
                     <input class="btn btn-primary" type="submit" value="POST">
                     <a class="btn btn-danger" href="{% url 'home' %}" style="float: right;">Cancel</a>
                 </form>

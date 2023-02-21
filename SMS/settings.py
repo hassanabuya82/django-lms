@@ -116,7 +116,7 @@ ASGI_APPLICATION = "SMS.asgi.application"
 # Some model fields may not work on sqlite db, so configure your postgresql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),

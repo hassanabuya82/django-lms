@@ -28,7 +28,21 @@
             <p class="form-title">Session Add & update Form</p>
             <div class="container"><br>
                 <form action="" method="POST">{% csrf_token %}
-                    {{ form|crispy }}
+                  
+
+                    <div class="form-group">
+                        <b>{{ form.session.label }}</b>{{ form.session }}
+                        <span class="danger">{{ form.session.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>{{ form.is_current_session.label }}</b>{{ form.is_current_session }}
+                        <span class="danger">{{ form.is_current_session.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>{{ form.next_session_begins.label }}</b>{{ form.next_session_begins }}
+                        <span class="danger">{{ form.next_session_begins.errors }}</span>
+                    </div>
+
                     <input class="btn btn-primary" type="submit" value="Save">
                 </form>
             </div>
